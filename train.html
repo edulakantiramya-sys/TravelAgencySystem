@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From - To</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-image: url("https://i.pinimg.com/originals/4a/01/90/4a0190c4f82a37a62b960fcc85325876.jpg");
+             background-size: cover; 
+            background-repeat: no-repeat;
+            background-color: #f4f7fc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        main {
+            width: 100%;
+            max-width: 1200px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .top .left h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #0072ff;
+        }
+
+        .top .right img {
+            width: 80px;
+            object-fit: contain;
+        }
+        .bottom {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            justify-items: center;
+            width: 100%;
+        }
+
+        .vehicles {
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            max-width: 350px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .vehicles img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .desc {
+            margin-top: 15px;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .desc h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .desc p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .vehicles:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        @media (max-width: 768px) {
+            .top {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .top .left h1 {
+                text-align: center;
+                font-size: 1.8rem;
+            }
+
+            .bottom {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .vehicles {
+                max-width: 100%;
+                padding: 15px;
+            }
+
+            .vehicles img {
+                height: 180px;
+            }
+
+            .desc h3 {
+                font-size: 1.1rem;
+            }
+
+            .desc p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section class="availableBuses">
+            <div class="top">
+                <div class="left">
+                    <h1>Available Trains</h1>
+                </div>
+                <div class="right">
+                    <img src="logo2.jpeg.jpg" alt="Logo">
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="vehicles">
+                    <img src="train2.jpeg.jpg" alt="Krishna Express">
+                    <div class="desc">
+                        <a href="./bookingdetails.html">
+                            <div class="descr">
+                                <h3>Krishna Express</h3>
+                                <p>Runs Daily</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="vehicles">
+                    <img src="train4.jpeg.jpg" alt="Golkonda Express">
+                    <div class="desc">
+                        <a href="./bookingdetails.html">
+                            <div class="descr">
+                                <h3>Golkonda Express</h3>
+                                <p>Mon - Sat</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="vehicles">
+                    <img src="train3.jpeg.jpg" alt="Konark Express">
+                    <div class="desc">
+                        <a href="./bookingdetails.html">
+                            <div class="descr">
+                                <h3>Konark Express</h3>
+                                <p>Only on Wed & Fri</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

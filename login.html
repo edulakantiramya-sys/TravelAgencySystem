@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background-color:grey;
+            font-size: 16px;
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+         
+            background-image: url('https://th.bing.com/th/id/R.88fe48a59953f4dc96ff3009af7b014c?rik=%2bfCpX3u0MSthRQ&riu=http%3a%2f%2fwallpapercave.com%2fwp%2f92r6xWU.jpg&ehk=3xXbcuUb0DBoXcr2YXGG04YDZfB7R3L0ASo0iAZahWE%3d&risl=&pid=ImgRaw&r=0');
+            background-size: cover; 
+            background-repeat: no-repeat; 
+        
+        }
+
+        main {
+            width: 100%;
+            max-width: 900px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            background-color: pink;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        .login {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .left {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-right: 40px;
+        }
+
+        .left img {
+            width: 80%;
+            max-width: 200px;
+            object-fit: contain;
+        }
+        .right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding-left: 40px;
+        }
+        .right h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #1d4ed8;
+            margin-bottom: 10px;
+        }
+        .right h3 {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .right form {
+            width: 100%;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input[type="tel"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            color: #333;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="tel"]:focus, input[type="password"]:focus {
+            border-color: #1d4ed8;
+            outline: none;
+        }
+
+        button {
+            background-color: #1d4ed8;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        button:hover {
+            background-color: #155db0;
+        }
+
+        button[type="reset"] {
+            background-color: #e0e0e0;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        button[type="reset"]:hover {
+            background-color: #ccc;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #333;
+            margin-top: 20px;
+        }
+
+        p a {
+            color: #1d4ed8;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        p a:hover {
+            color: #155db0;
+        }
+        @media (max-width: 768px) {
+            .login {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .left {
+                padding-right: 0;
+                margin-bottom: 20px;
+            }
+
+            .right {
+                padding-left: 0;
+                align-items: center;
+            }
+
+            .right h1 {
+                font-size: 1.6rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <section class="login">
+            <div class="left">
+                <img src="logo2.jpeg.jpg" alt="Logo">
+            </div>
+            <div class="right">
+                <h1>Login</h1>
+                <form action="./travelagency.html" method="get" onsubmit="return validPhno()">
+                    <label for="phone">Mobile Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter Mobile Number" minlength="10" maxlength="10" pattern="[0-9]{10}" required>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter Password" minlength="8" title="Must contain at least 8 Characters, including letters & numbers" required>
+                    <button type="reset">Reset</button>
+                    <button type="submit">Login</button>
+                </form>
+                <p>Don't have an account? <a href="./register.html">Register Here!</a></p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

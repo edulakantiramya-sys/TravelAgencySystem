@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From - To</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        /* Body Styling */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-image: url('https://th.bing.com/th/id/R.35a92a99df5d5d51b037ba5fa9102e04?rik=l8fTY2vSouRekg&riu=http%3a%2f%2fwallpapercave.com%2fwp%2fshDUNb6.jpg&ehk=OEaGJ47fyGcv%2bpBW%2bZqcgwoX9jjKlGcmDGGKPdqiKcw%3d&risl=&pid=ImgRaw&r=0');
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            color: #ffffff;
+        }
+
+        /* Main Styling */
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Section Styling */
+        .availableBuses {
+            width: 80%;
+            background: burlywood;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Top Section */
+        .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .top .left h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .top .right img {
+            height: 50px;
+            width: auto;
+            border-radius: 8px;
+        }
+
+        /* Bottom Section */
+        .bottom {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .vehicles {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            max-width: 300px;
+            text-align: center;
+        }
+
+        .vehicles:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 20px white;
+        }
+
+        .vehicles img {
+            width: 100%;
+            height: auto;
+        }
+
+        .desc {
+            padding: 15px;
+        }
+
+        .desc a {
+            text-decoration: none;
+            color: #ffffff;
+            transition: color 0.3s ease;
+        }
+
+        .desc a:hover {
+            color: #FFD700; /* Gold color on hover */
+        }
+
+        .descr h3 {
+            margin: 10px 0;
+            font-size: 1.5rem;
+        }
+
+        .descr p {
+            margin: 0;
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+    </style>
+</head>
+<body> 
+    <main>
+        <section class="availableBuses">
+            <div class="top">
+                <div class="left">
+                    <h1>Available Cars</h1>
+                </div>
+                <div class="right">
+                    <img src="logo2.jpeg.jpg" alt="Company Logo">
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="vehicles">
+                    <img src="car2.jpeg.jpg" alt="Toyota Innova">
+                    <div class="desc">
+                        <a href="./bookingdetails.html">
+                            <div class="descr">
+                                <h3>Toyota Innova</h3>
+                                <p>6 Passengers Allowed</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="vehicles">
+                    <img src="car3.jpg" alt="Swift Dzire">
+                    <div class="desc">
+                        <a href="./bookingdetails.html">
+                            <div class="descr">
+                                <h3>Swift Dzire</h3>
+                                <p>4 Passengers Allowed</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="vehicles">
+                    <img src="car4.jpeg.jpg" alt="Ertiga, Xylo">
+                    <div class="desc">
+                        <a href="./bookingdetails.html">
+                            <div class="descr">
+                                <h3>Ertiga, Xylo</h3>
+                                <p>6 Passengers Allowed</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

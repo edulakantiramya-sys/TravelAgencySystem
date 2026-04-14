@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Details</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Reset and Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            font-size: 16px;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        main {
+            width: 100%;
+            max-width: 900px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Payment Section */
+        .payment {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .top {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+
+        .left h1 {
+            font-size: 2rem;
+            color: #0072ff;
+            font-weight: 600;
+        }
+
+        .right img {
+            width: 80px;
+            object-fit: contain;
+        }
+
+        .bottom {
+            width: 100%;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .btop {
+            margin-bottom: 30px;
+        }
+
+        .up {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            justify-content: center;
+        }
+
+        .up .left img {
+            width: 50px;
+            height: 50px;
+            margin-right: 20px;
+        }
+
+        .up .right h3 {
+            font-size: 1.4rem;
+            color: #333;
+        }
+
+        .down {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .paymentmode {
+            text-align: center;
+            margin: 15px;
+        }
+
+        .paymentmode img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .paymentmode p {
+            font-size: 1.1rem;
+            color: #0072ff;
+            font-weight: 600;
+        }
+
+        button {
+            background-color: #0072ff;
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+            width: 100%;
+            max-width: 300px;
+            margin-top: 20px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        button:hover {
+            background-color: #005bb5;
+        }
+
+        button a {
+            color: #fff;
+            text-decoration: none;
+        }
+        @media (max-width: 768px) {
+            .top {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .bottom {
+                padding: 15px;
+            }
+
+            .down {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .paymentmode {
+                margin: 10px;
+            }
+
+            button {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section class="payment">
+            <div class="top">
+                <div class="left">
+                    <h1>Pay Online</h1>
+                </div>
+                <div class="right">
+                    <img src="logo2.jpeg.jpg" alt="Logo">
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="btop">
+                    <div class="up">
+                        <div class="left">
+                            <img src="upi.jpeg.jpg" alt="UPI Logo">
+                        </div>
+                        <div class="right">
+                            <h3>Pay by any UPI App</h3>
+                        </div>
+                    </div>
+                    <div class="down">
+                        <div class="paymentmode">
+                            <img src="phonepe.jpeg.jpg" alt="PhonePe">
+                            <p>PhonePe</p>
+                        </div>
+                        <div class="paymentmode">
+                            <img src="paytm2.jpeg.jpg" alt="Paytm">
+                            <p>Paytm</p>
+                        </div>
+                    </div>
+                </div>
+                <button><a href="./popup.html">Proceed Payment</a></button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

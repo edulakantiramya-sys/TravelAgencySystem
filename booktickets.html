@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Tickets</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* CSS Variables for Consistent Styling */
+        :root {
+            --primary-color: #3b82f6;
+            --secondary-color: #2563eb;
+            --light-gray: #f0f0f0;
+            --bg-gradient: linear-gradient(to right, #eef2f3, #f7f9fc);
+            --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            --border-radius: 10px;
+        }
+
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: var(--bg-gradient);
+            color: #333;
+            line-height: 1.6;
+            background-image: url('https://c8.alamy.com/comp/2GE6JFJ/city-map-gps-navigation-with-location-pin-markers-urban-downtown-roads-parks-river-red-pointers-on-roadmap-navigator-vector-illustration-guidance-to-find-destination-trip-planning-2GE6JFJ.jpg');
+            background-size: cover; 
+            background-repeat: no-repeat;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .booktickets {
+            background: #fff;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .booktickets .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--light-gray);
+            padding: 20px;
+        }
+
+        .booktickets .top h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+        }
+
+        .booktickets .top .links ul {
+            display: flex;
+            gap: 15px;
+            list-style: none;
+        }
+
+        .booktickets .top .links a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 600;
+            border: 2px solid var(--primary-color);
+            padding: 10px 15px;
+            border-radius: var(--border-radius);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .booktickets form {
+            padding: 20px;
+            display: grid;
+            gap: 20px;
+        }
+
+        .booktickets form label {
+            font-weight: bold;
+        }
+
+        .booktickets form select,
+        .booktickets form input {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            border: 2px solid black;
+            border-radius: var(--border-radius);
+        }
+
+        .booktickets form button {
+            background: var(--primary-color);
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .booktickets form button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section class="booktickets">
+            <div class="top">
+                <div class="left">
+                    <h1>Book Tickets</h1>
+                    <div class="links">
+                        <ul>
+                            <li><a onclick="b(event)">Reschedule Tickets</a></li>
+                            <li><a onclick="c(event)">Cancel Tickets</a></li>
+                            <li><a onclick="d(event)">Settings</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <form id="bookingForm" action="./searchvehicles.html">
+                    <label for="from">From:</label>
+                    <select id="from" name="from" required>
+                        <option value="default">Select Starting Location</option>
+                        <option value="Hanamkonda">Hanamkonda</option>
+                        <option value="Hyderabad">Hyderabad</option>
+                        <option value="Secunderabad">Secunderabad</option>
+                        <option value="Warangal">Warangal</option>
+                    </select>
+                    <label for="to">To:</label>
+                    <select id="to" name="to" required>
+                        <option value="default">Select Destination</option>
+                        <option value="Warangal">Warangal</option>
+                        <option value="Hyderabad">Hyderabad</option>
+                        <option value="Secunderabad">Secunderabad</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Mumbai">Mumbai</option>
+                    </select>
+
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date" required>
+
+                    <button type="submit" id="searchButton" disabled>Search Vehicles</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script>
+        const fromField = document.getElementById('from');
+        const toField = document.getElementById('to');
+        const searchButton = document.getElementById('searchButton');
+
+        function toggleSearchButton() {
+            const fromValue = fromField.value;
+            const toValue = toField.value;
+
+            // Enable button only if both "From" and "To" have valid (non-default) values and are different
+            if (fromValue !== "default" && toValue !== "default" && fromValue !== toValue) {
+                searchButton.disabled = false;
+            } else {
+                searchButton.disabled = true;
+            }
+        }
+
+        // Add event listeners for both fields
+        fromField.addEventListener('change', toggleSearchButton);
+        toField.addEventListener('change', toggleSearchButton);
+
+        function b(event) {
+            event.preventDefault();
+            window.location.href = 'reschedule.html';
+        }
+
+        function c(event) {
+            event.preventDefault();
+            window.location.href = 'cancel.html';
+        }
+
+        function d(event) {
+            event.preventDefault();
+            window.location.href = 'settings.html';
+        }
+    </script>
+</body>
+</html>

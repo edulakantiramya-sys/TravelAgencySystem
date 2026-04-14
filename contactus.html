@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Reset and Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: rgb(182, 224, 240);
+            color: #333;
+            font-size: 16px;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        main {
+            width: 100%;
+            max-width: 1200px;
+            padding: 40px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px black;
+            background-image: url('https://th.bing.com/th/id/R.3c68caf95e0988dba694cf1c5a30239e?rik=rGcpSJbI%2bWydQg&riu=http%3a%2f%2fcdn.primedia.co.za%2fprimedia-broadcasting%2fimage%2fupload%2fv1661525029%2fc5yu1gn4xe2rguprless.jpg&ehk=FVEUlF9tp%2bDW3AAf7dnvQY0wOKyh5979KFOlkf6KNaU%3d&risl=&pid=ImgRaw&r=0');
+            background-size: cover; 
+            background-repeat: no-repeat;
+        }
+
+        /* Top Section Styling */
+        .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        .top h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #1d4ed8;
+        }
+
+        .top img {
+            width: 80px;
+            border-radius: 50%;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Main Section Styling */
+        .main {
+            margin-top: 20px;
+        }
+
+        .main p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .details {
+            margin-bottom: 20px;
+        }
+
+        .details h3 {
+            font-size: 1.5rem;
+            color: #1d4ed8;
+            margin-bottom: 10px;
+        }
+
+        .details h4 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        .details a {
+            text-decoration: none;
+            color: #1d4ed8;
+            transition: color 0.3s ease;
+        }
+
+        .details a:hover {
+            color: #0056b3;
+        }
+
+        /* Media Query for Mobile */
+        @media (max-width: 768px) {
+            main {
+                padding: 20px;
+                width: 100%;
+                margin-top: 20px;
+            }
+
+            .top h1 {
+                font-size: 1.5rem;
+            }
+
+            .details h3 {
+                font-size: 1.3rem;
+            }
+
+            .details h4 {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .top h1 {
+                font-size: 1.2rem;
+            }
+
+            .details h3 {
+                font-size: 1.2rem;
+            }
+
+            .details h4 {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section class="contactUs">
+            <div class="top">
+                <div class="left">
+                    <h1>Contact Us</h1>
+                </div>
+                <div class="right">
+                    <img src="logo2.jpeg.jpg" alt="Logo">
+                </div>
+            </div>
+            <div class="main">
+                <p>Get in touch with us to plan your trip</p>
+                
+                <!-- Address Section -->
+                <div class="details">
+                    <h3>Address</h3>
+                    <h4>[Travel Agency]</h4>
+                    <h4>[Hanamkonda]</h4>
+                    <h4>[Hanamkonda, Telangana, 506001]</h4>
+                    <h4>[India]</h4>
+                </div>
+
+                <!-- Phone Section -->
+                <div class="details">
+                    <h3>Phone</h3>
+                    <h4>[9928151623]</h4>
+                    <h4>[Toll-Free-Number-10081001100]</h4>
+                </div>
+
+                <!-- Email Section -->
+                <div class="details">
+                    <h3>Email</h3>
+                    <h4><a href="mailto:info@travelagency.com">info@travelagency.com</a></h4>
+                    <h4><a href="mailto:sales@travelagency.com">sales@travelagency.com</a> (for booking inquiries)</h4>
+                    <h4><a href="mailto:support@travelagency.com">support@travelagency.com</a> (for customer support)</h4>
+                </div>
+
+                <!-- Social Media Section -->
+                <div class="details">
+                    <h3>Social Media</h3>
+                    <h4>Stay connected with us!</h4>
+                    <h4>Facebook: [@travelagency]</h4>
+                    <h4>Twitter: [@travelagency]</h4>
+                    <h4>Instagram: [@travelagency]</h4>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

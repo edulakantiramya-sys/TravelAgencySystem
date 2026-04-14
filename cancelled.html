@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancel Details</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Reset and Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f4f7fc;
+            color: #333;
+            font-size: 16px;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        main {
+            width: 100%;
+            max-width: 900px;
+            margin: 20px;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Top Section Styling */
+        .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        .top h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #1d4ed8;
+        }
+
+        .top img {
+            width: 80px;
+            border-radius: 50%;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Bottom Section Styling */
+        .bottom {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .bottom img {
+            width: 200px;
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            margin-bottom: 20px;
+        }
+
+        .bottom h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #2d6a4f;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .bottom h1 {
+                font-size: 2rem;
+            }
+
+            .top h1 {
+                font-size: 1.5rem;
+            }
+
+            .bottom img {
+                width: 80%;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .top h1 {
+                font-size: 1.3rem;
+            }
+
+            .bottom h1 {
+                font-size: 1.6rem;
+            }
+
+            .bottom img {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section class="payment">
+            <div class="top">
+                <div class="left">
+                    <h1>Cancelled</h1>
+                </div>
+                <div class="right">
+                    <img src="logo2.jpeg.jpg" alt="Company Logo">
+                </div>
+            </div>
+            <div class="bottom cancel">
+                <img src="cancelled.jpeg.jpg" alt="Cancelled Ticket Image">
+                <h1>Ticket Cancelled Successfully</h1>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

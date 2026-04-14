@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancel Details</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to right, #f3f4f6, #e2e8f0);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        main {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .bookingdetails {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .bookingdetails .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        .bookingdetails .top h1 {
+            font-size: 1.8rem;
+            color: #1d4ed8;
+        }
+
+        .bookingdetails .top img {
+            max-width: 80px;
+            border-radius: 50%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .bookingdetails .bottom {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .bookingdetails form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .bookingdetails label {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #374151;
+        }
+
+        .bookingdetails input {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #d1d5db;
+            border-radius: 5px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .bookingdetails input:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 8px rgba(37, 99, 235, 0.2);
+        }
+
+        .bookingdetails button {
+            padding: 12px;
+            font-size: 1rem;
+            background-color: #2563eb;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .bookingdetails button:hover {
+            background-color: #1e40af;
+            transform: translateY(-2px);
+        }
+
+        .bookingdetails button:active {
+            transform: translateY(0);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 500px) {
+            .bookingdetails .top {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .bookingdetails .top h1 {
+                font-size: 1.6rem;
+            }
+
+            .bookingdetails .top img {
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section class="bookingdetails">
+            <div class="top tops">
+                <div class="left">
+                    <h1>Cancel Ticket Details</h1>
+                </div>
+                <div class="right">
+                    <img src="logo2.jpeg.jpg" alt="Company Logo">
+                </div>
+            </div>
+            <div class="bottom form btn">
+                <form action="./cancelled.html">
+                    <label for="MobileNumber">Mobile Number:</label>
+                    <input type="number" placeholder="Enter Mobile Number" required>
+                    <label for="TicketNumber">Ticket Number:</label>
+                    <input type="text" placeholder="Enter Ticket Number" required>
+                    <button type="submit">Cancel</button>    
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

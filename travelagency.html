@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Agency</title>
+    <style>
+        /* Global Reset and Box Model */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-image: url('https://images.pexels.com/photos/346885/pexels-photo-346885.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Main Container */
+        main {
+            width: 100%;
+            max-width: 1200px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* Top Section */
+        .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .top .left h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #0072ff;
+        }
+
+        .top .right img {
+            width: 80px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        /* Main Section */
+        .main {
+            margin-bottom: 40px;
+        }
+
+        .main h3 {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            text-align: justify;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Button */
+        button {
+            background-color: #0072ff;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-align: center;
+        }
+
+        button a {
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+
+        button:hover {
+            background-color: #005bb5;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .top {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .top .left h1 {
+                font-size: 2rem;
+                margin-bottom: 10px;
+            }
+
+            .main h3 {
+                font-size: 1rem;
+                text-align: center;
+                margin-bottom: 15px;
+            }
+
+            button {
+                width: 100%;
+                font-size: 1rem;
+                padding: 12px 25px;
+            }
+        }
+    </style>
+    <script>
+          function b(event)
+        {
+            event.preventDefault();
+            window.location.href='booktickets.html';
+        }
+    </script>
+</head>
+<body>
+    <main>
+        <section class="travelagency">
+            <div class="top">
+                <div class="left">
+                    <h1>Travel Agency</h1>
+                </div>
+                <div class="right">
+                    <img src="logo2.jpeg.jpg" alt="Logo">
+                </div>
+            </div>
+            <div class="main">
+                <h3>Welcome to Travel Agency, where we create personalized travel experiences for every type of traveler. From exotic gateways to adventurous tours.</h3>
+                <h3>We handle services, hotels, and more. With 24/7 support & exclusive deals, we ensure a seamless journey. Start your next unforgettable adventure with us today!</h3>
+            </div>
+            <button type="button" onclick="b(event)">Book Now</button>
+     
+        </section>
+    </main>
+</body>
+</html>

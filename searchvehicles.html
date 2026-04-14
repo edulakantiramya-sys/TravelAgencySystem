@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Vehicles</title>
+    <style>
+        /* Global Reset and Box Model */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Main Container */
+        main {
+            width: 100%;
+            max-width: 1200px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* Top Section */
+        .top {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            align-items: center;
+        }
+
+        .top .left h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #0072ff;
+            margin-bottom: 0;
+        }
+
+        .top .right img {
+            width: 80px;
+            object-fit: contain;
+        }
+
+        /* Bottom Section (Vehicle Options) */
+        .bottom {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            width: 100%;
+            justify-items: center;
+        }
+
+        .vehicles {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            padding: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            max-width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .vehicles img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .vehicles button {
+            background-color: #0072ff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 8px;
+            margin-top: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .vehicles button a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .vehicles:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .vehicles button:hover {
+            background-color: #005bb5;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .top {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .top .left h1 {
+                font-size: 1.8rem;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .top .right img {
+                width: 100px;
+                margin-top: 20px;
+            }
+
+            .bottom {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .vehicles {
+                max-width: 90%;
+                padding: 20px;
+            }
+
+            .vehicles img {
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section class="searchvehicles">
+            <div class="top">
+                <div class="left">
+                    <h1>Available Vehicles</h1>
+                </div>
+                <div class="right">
+                    <img src="logo2.jpeg.jpg" alt="Logo">
+                </div>
+            </div>
+
+            <div class="bottom">
+                <div class="vehicles">
+                    <img src="bus1.jpg" alt="Bus">
+                    <button><a href="./bus.html">Bus</a></button>
+                </div>
+                <div class="vehicles">
+                    <img src="car1.jpeg.jpg" alt="Car">
+                    <button><a href="./car.html">Car</a></button>
+                </div>
+                <div class="vehicles">
+                    <img src="train1.jpeg.jpg" alt="Train">
+                    <button><a href="./train.html">Train</a></button>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

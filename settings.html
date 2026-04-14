@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <style>
+        /* Global Reset and Box Model */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f4f7fc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Main Container */
+        main {
+            width: 100%;
+            max-width: 1000px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* Top Section */
+        .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .top .left h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #0072ff;
+        }
+
+        .top .right img {
+            width: 90px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        /* Bottom Section - Settings Form */
+        .bottom {
+            width: 100%;
+        }
+
+        .setting {
+            margin-bottom: 20px;
+        }
+
+        .setting .country, .setting .language {
+            margin-bottom: 25px;
+        }
+
+        .setting label {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .checkbox {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .checkbox input {
+            margin-right: 10px;
+        }
+
+        .checkbox label {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        /* Button Styling */
+        button {
+            background-color: #0072ff;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 1.1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #005bb5;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .top {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .top .left h1 {
+                text-align: center;
+                font-size: 1.8rem;
+                margin-bottom: 20px;
+            }
+
+            .bottom {
+                padding: 20px;
+            }
+
+            .setting label {
+                font-size: 1rem;
+            }
+
+            .checkbox {
+                font-size: 0.9rem;
+            }
+
+            button {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section class="settings">
+            <div class="top">
+                <div class="left">
+                    <h1>Settings</h1>
+                </div>
+                <div class="right">
+                    <img src="logo2.jpeg.jpg" alt="Logo">
+                </div>
+            </div>
+            <div class="bottom">
+                <form action="./index.html">
+                    <div class="setting">
+                        <div class="country">
+                            <label for="Country">Country:</label>
+                            <div class="checkbox">
+                                <input type="checkbox" name="choice" value="India">
+                                <label for="India">India</label>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" name="choice" value="Algeria">
+                                <label for="Algeria">Algeria</label>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" name="choice" value="China">
+                                <label for="China">China</label>
+                            </div>
+                        </div>
+                        <div class="language">
+                            <label for="Language">Language:</label>
+                            <div class="checkbox">
+                                <input type="checkbox" name="choice" value="Telugu">
+                                <label for="Telugu">Telugu</label>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" name="choice" value="English">
+                                <label for="English">English</label>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" name="choice" value="Hindi">
+                                <label for="Hindi">Hindi</label>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit">Log Out</button>    
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

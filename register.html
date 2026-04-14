@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        /* General reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body and background settings */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f8; /* Soft light gray */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        /* Centering the form container */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            width: 100%;
+            padding: 30px;
+        }
+
+        /* Left section (Logo) */
+        .left {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-right: 30px;
+        }
+
+        .left img {
+            max-width: 180px;
+            width: 100%;
+        }
+
+        /* Right section (Form) */
+        .right {
+            flex: 1.5;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 30px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        /* Form Styling */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 1rem;
+            color: #444;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-top: 8px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus {
+            border-color: #007bff; /* Blue focus border */
+        }
+
+        /* Button Styling */
+        button {
+            width: 48%;
+            padding: 12px;
+            font-size: 1rem;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        button[type="reset"] {
+            background-color: #f44336;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Form actions container */
+        .form-actions {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Link Styling */
+        p {
+            text-align: center;
+            font-size: 1rem;
+            color: #666;
+            margin-top: 20px;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .left {
+                padding-right: 0;
+                padding-bottom: 20px;
+            }
+
+            .right {
+                padding-left: 0;
+                padding-top: 20px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .form-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            button {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Left section with the logo -->
+        <div class="left">
+            <img src="logo2.jpeg.jpg" alt="Logo">
+        </div>
+
+        <!-- Right section with the form -->
+        <div class="right">
+            <h1>Register</h1>
+            <h3>Create your account</h3>
+            <form action="./travelagency.html" method="get" onsubmit="return validatePassword()">
+                <!-- Mobile Number -->
+                <div class="form-group">
+                    <label for="phone">Mobile Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter Mobile Number" minlength="10" maxlength="10" pattern="[0-9]{10}" required>
+                </div>
+
+                <!-- Password -->
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter Password" minlength="8" title="Must contain at least 8 characters, including letters & numbers" required>
+                </div>
+
+                <!-- Confirm Password -->
+                <div class="form-group">
+                    <label for="confirm_password">Confirm Password</label>
+                    <input type="password" id="confirm_password" name="confirm_password" minlength="8" placeholder="Re-enter Password" required>
+                </div>
+
+                <!-- Buttons -->
+                <div class="form-actions">
+                    <button type="reset">Reset</button>
+                    <button type="submit">Sign In</button>
+                </div>
+            </form>
+            <p>Already have an account? <a href="./login.html">Login Here!</a></p>
+        </div>
+    </div>
+
+    <script src="../app.js"></script>
+</body>
+</html>

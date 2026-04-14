@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to right, #f3f4f6, #eef2f3);
+            color: #333;
+            line-height: 1.6;
+            background-image: url('https://i.pinimg.com/originals/a8/21/e5/a821e57a0341c7d4dbda6e52d3c2ee94.jpg');
+            background-size: cover; 
+            background-repeat: no-repeat;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* About Section */
+        .about {
+            background: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 20px;
+            padding: 20px;
+        }
+
+        .about .top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .about .top .right img {
+            max-width: 100px;
+            border-radius: 50%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .about .top .right img:hover {
+            transform: scale(1.1);
+        }
+
+        .about .top .left h1 {
+            font-size: 2.5rem;
+            color: #3b82f6;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .about .main {
+            padding: 20px 0;
+        }
+
+        .about .main h3 {
+            font-size: 1.5rem;
+            color: #3b82f6;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .about .main h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 50px;
+            height: 3px;
+            background: #3b82f6;
+            border-radius: 5px;
+        }
+
+        .about .main p {
+            margin-bottom: 20px;
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .about .top {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about .top .left h1 {
+                font-size: 2rem;
+            }
+
+            .about .main p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+    
+</head>
+
+<body>
+    <main>
+        <section class="about">
+            <div class="top">
+                <div class="right">
+                    <img src="logo2.jpeg.jpg" alt="Company Logo">
+                </div>
+                <div class="left">
+                    <h1>
+
+                        About
+
+                    </h1>
+                </div>
+            </div>
+            <div class="main">
+                <h3>Privacy Policy:</h3>
+                <p>At Travel Agency, we believe that every journey tells a story, and we're here to make yours
+                    unforgettable. With years of experience in curating personalized travel experiences, we offer a
+                    diverse range of destinations and packages that cater to every type of traveller—from adventurous
+                    explorers to those seeking relaxation and luxury.</p>
+                <h3>Terms & Conditions:</h3>
+                <p>Our dedicated team of travel experts is committed to providing exceptional customer service, ensuring
+                    that every detail of your trip is meticulously planned and executed. Whether you're looking for a
+                    weekend getaway, an international vacation, or a once-in-a-lifetime adventure, we are your trusted
+                    partners in travel.</p>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

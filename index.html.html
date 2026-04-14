@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Agency</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            background-image: url('https://www.smartertravel.com/wp-content/uploads/2020/03/ST_ZoomBackground_Beach03.jpg');
+            background-size: cover; 
+            background-repeat: no-repeat; 
+        }
+        .home .right ul li a {
+            cursor: pointer;
+        }
+        @media (min-width: 360px) {
+            .home .one {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+            .home .one li {
+                text-align: center;
+                padding: 0.3rem;
+                list-style: none;
+                font-weight: 600;
+                font-size: x-large;
+            }
+            .home .one li a {
+                text-decoration: none;
+                color: black;
+            }
+            .home .main .top .vehicle, .searchvehicles .bottom .vehicles, .availableBuses .bottom .vehicles {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                margin: 1rem;
+            }
+            .home .main .top .vehicle img {
+                height: 100px;
+                width: 100px;
+                border-radius: 20px;
+            }
+            .home .main .top .vehicle .v1 {
+                border: 10px solid red;
+            }
+            .home .main .top .vehicle .v2 {
+                border: 10px solid green;
+            }
+            .home .main .top .vehicle .v3 {
+                border: 10px solid rgb(255, 100, 0);
+            }
+            .home .main .bottom {
+                text-align: center;
+            }
+            .home .main .bottom h1, .home .main .bottom h3 {
+                font-size: 4rem;
+                font-weight: 900;
+                margin: 1rem;
+            }
+            .home .main .bottom h3 {
+                font-size: 2rem;
+            }
+        }
+        @media (min-width: 600px) {
+            .home .one {
+                margin-top: 1rem;
+            }
+            .home .left ul li, .home .right ul li {
+                margin: 0.5rem;
+            }
+            .home .main .top {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: row;
+                margin: 1rem;
+                margin-top: 2rem;
+            }
+            .home .main .bottom h1 {
+                margin-top: 3rem;
+            }
+        }
+        @media (min-width: 700px) {
+            .home .one {
+                display: grid;
+                grid-template-columns: 25% 75%;
+            }
+            .home .one .right ul {
+                display: grid;
+                grid-template-columns: 33% 34% 33%;
+            }
+        }
+    </style>
+    <script>
+        function b(event) {
+            event.preventDefault();
+            window.location.href = 'about.html';
+        }
+        function c(event) {
+            event.preventDefault();
+            window.location.href = 'contactus.html';
+        }
+        function d(event) {
+            event.preventDefault();
+            window.location.href = 'login.html';
+        }
+    </script>
+</head>
+<body>
+    <main>
+        <section class="home">
+            <div class="one">
+                <div class="left">
+                    <ul>
+                        <li>Travel Agency</li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <ul>
+                        <li><a onclick="b(event)">About</a></li>
+                        <li><a onclick="c(event)">Contact Us</a></li>
+                        <li><a onclick="d(event)">Log In</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main">
+                <div class="top">
+                    <div class="vehicle">
+                        <img src="car.jpeg.jpg" alt="" class="v1">
+                    </div>
+                    <div class="vehicle v2">
+                        <img src="bus.jpeg.jpg" alt="" class="v2">
+                    </div>
+                    <div class="vehicle v3">
+                        <img src="train.jpeg.jpg" alt="" class="v3">
+                    </div>
+                </div>
+                <div class="bottom">
+                    <h1>TRAVEL AGENCY</h1>
+                    <h3><i>Smooth & Safe Journey</i></h3>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

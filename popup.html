@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Details</title>
+    <style>
+        /* Global Reset and Box Model */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Main Container */
+        main {
+            width: 100%;
+            max-width: 900px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* Top Section */
+        .top {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            align-items: center;
+        }
+
+        .top .left h1 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: #0072ff;
+        }
+
+        .top .right img {
+            width: 80px;
+            object-fit: contain;
+        }
+
+        /* Bottom Section */
+        .bottom {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .bottom .left {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .bottom .left h1 {
+            font-size: 2rem;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .bottom .right img {
+            width: 200px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Go Back Button */
+        .goback {
+            width: 100%;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .goback button {
+            background-color: #0072ff;
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .goback button:hover {
+            background-color: #005bb5;
+        }
+
+        .goback button a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .top {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .top .left h1 {
+                font-size: 1.8rem;
+            }
+
+            .bottom .left h1 {
+                font-size: 1.8rem;
+            }
+
+            .bottom .right img {
+                width: 150px;
+            }
+
+            .goback button {
+                width: 100%;
+                padding: 12px 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section class="payment">
+            <div class="top">
+                <div class="left">
+                    <h1>Pay Online</h1>
+                </div>
+                <div class="right">
+                    <img src="logo2.jpeg.jpg" alt="Logo">
+                </div>
+            </div>
+
+            <div class="bottom">
+                <div class="left">
+                    <h1>Payment Done Successfully</h1>
+                </div>
+
+                <div class="right">
+                    <img src="confirmed.jpeg.jpg" alt="Confirmed">
+                </div>
+
+                <div class="goback">
+                    <button><a href="../index.html">Go Back</a></button>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
